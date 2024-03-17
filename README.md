@@ -1,4 +1,4 @@
-# Yahya Ganjo automation assignment Volkskrank/PlayWright
+# Yahya Ganjo automation assignment Volkskrant/PlayWright
 
 Hi 👋🏽!
 
