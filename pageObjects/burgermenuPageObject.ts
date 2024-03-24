@@ -15,7 +15,10 @@ export class BurgerMenuPage {
   constructor(page: Page) {
     this.page = page;
     this.notice = page.frameLocator('iframe[title="SP Consent Message"]');
-    this.agreeButtonLabel = this.notice.getByLabel("Akkoord");
+    this.agreeButtonLabel = this.notice.getByRole("button", {
+      name: "Akkoord",
+      exact: true,
+    });
     this.burgermenuIcon = page.locator("[data-menu-trigger=sections]").first();
     this.menu = page.locator("[data-menu=sections]");
     this.closeButton = page
@@ -29,8 +32,14 @@ export class BurgerMenuPage {
   }
 
   async getNotice() {
-    await this.agreeButtonLabel.click();
-    this.page.on("pageerror", (error) => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const currentUrl = this.page.url();
+
+    if (currentUrl !== testdata.baseURL) {
+      this.agreeButtonLabel.click();
+    }
+
+    this.page.on("pageerror", (error: Error) => {
       if (error.message.includes("Things went bad")) {
         // Handle the specific error
         console.error("Caught exception:", error);

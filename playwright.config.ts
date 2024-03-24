@@ -1,28 +1,32 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from "@playwright/test";
 
-require('dotenv').config();
+require("dotenv").config();
 
 export default defineConfig({
-
   forbidOnly: !!process.env.CI,
 
-  retries: 2,
+  retries: 1,
 
   workers: process.env.CI ? 1 : undefined,
 
-  reporter: 'html',
+  reporter: "html",
   use: {
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
+    baseURL: "https://www.volkskrant.nl/",
+    trace: "on-first-retry",
+    screenshot: "only-on-failure",
   },
   projects: [
-
     {
-      name: 'chromium',
-      use: { 
-        baseURL: 'https://www.volkskrant.nl/',
-         ...devices['Desktop Chrome']
-      },
+      name: "chromium",
+      use: devices["Desktop Chrome"],
     },
-  ]
+    {
+      name: "firefox",
+      use: devices["Desktop Firefox"],
+    },
+    {
+      name: "webkit",
+      use: devices["Desktop Safari"],
+    },
+  ],
 });

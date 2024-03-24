@@ -1,7 +1,8 @@
 import { test, expect } from "@playwright/test";
 import { BurgerMenuPage } from "../pageObjects/burgermenuPageObject";
+import { testdata } from "../fixtures/testData";
 
-test.describe("visit the website", () => {
+test.describe("Burger menu tests", () => {
   let burgerMenuPage: BurgerMenuPage;
 
   test.beforeEach(async ({ page }) => {
@@ -20,9 +21,10 @@ test.describe("visit the website", () => {
 
   test("Verify BurgerMenu content", async () => {
     await burgerMenuPage.validateMenuOptions(0);
+    await burgerMenuPage.validateMenuOptions(1);
   });
 
-  test("Verify BurgerMenu option page", async () => {
+  test("Verify BurgerMenu items navigation", async () => {
     await burgerMenuPage.validateListItemNavigation(0, 0);
     await burgerMenuPage.clickOnBurgerMenu();
     await burgerMenuPage.validateListItemNavigation(0, 3);
