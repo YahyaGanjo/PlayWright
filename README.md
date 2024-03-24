@@ -4,4 +4,16 @@
 
 2. Install Playwright 'npm init playwright@latest'
 
-3. use 'npm run test:e2e' command to run the test cases
+3. use 'npm run test:e2e' command to run all test cases, on all browsers
+
+   #Chrome
+
+   "npm run test:chromium"
+
+   #Firefox
+
+   "npm run test:firefox"
+
+   #Safari
+
+   "npm run test:webkit"

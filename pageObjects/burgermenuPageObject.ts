@@ -9,7 +9,7 @@ export class BurgerMenuPage {
   readonly menu: Locator;
   readonly closeButton: Locator;
   readonly appMenu: Locator;
-  readonly backToMenuIcon: Locator;
+  readonly backToHomeIcon: Locator;
   readonly appHeaderIcon: Locator;
 
   constructor(page: Page) {
@@ -27,7 +27,7 @@ export class BurgerMenuPage {
       .getByRole("img")
       .first();
     this.appMenu = page.locator('[data-menu="sections"]');
-    this.backToMenuIcon = page.getByRole("banner").getByRole("link").first();
+    this.backToHomeIcon = page.getByRole("banner").getByRole("link").first();
     this.appHeaderIcon = page.locator("div.app-header-home__brand");
   }
 
@@ -83,7 +83,7 @@ export class BurgerMenuPage {
     await listItem.scrollIntoViewIfNeeded();
     await listItem.click();
     await expect(this.page).toHaveURL(testdata.url[listIndex][itemIndex]);
-    await this.backToMenuIcon.click();
+    await this.backToHomeIcon.click();
     await expect(this.appHeaderIcon).toBeVisible();
   }
 }
