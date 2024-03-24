@@ -1,6 +1,5 @@
 import { test, expect } from "@playwright/test";
 import { BurgerMenuPage } from "../pageObjects/burgermenuPageObject";
-import { testdata } from "../fixtures/testData";
 
 test.describe("Burger menu tests", () => {
   let burgerMenuPage: BurgerMenuPage;

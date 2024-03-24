@@ -7,7 +7,7 @@ export default defineConfig({
 
   retries: 1,
 
-  workers: process.env.CI ? 1 : undefined,
+  workers: 3,
 
   reporter: "html",
   use: {
@@ -17,12 +17,12 @@ export default defineConfig({
   },
   projects: [
     {
-      name: "chromium",
-      use: devices["Desktop Chrome"],
+      name: "Firefox",
+      use: devices["Desktop Firefox"],
     },
     {
-      name: "firefox",
-      use: devices["Desktop Firefox"],
+      name: "chromium",
+      use: devices["Desktop Chrome"],
     },
     {
       name: "webkit",
