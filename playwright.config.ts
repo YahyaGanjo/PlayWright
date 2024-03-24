@@ -20,7 +20,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { 
-        baseURL: 'https://playwright.dev/',
+        baseURL: 'https://www.volkskrant.nl/',
          ...devices['Desktop Chrome']
       },
     },
