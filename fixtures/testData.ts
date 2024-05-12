@@ -1,7 +1,7 @@
 export const testdata = {
   baseURL: "https://www.volkskrant.nl/",
   menuOptions: [
-    ["Bewaarde artikelen", "Digitale editie", "Nieuwsbrieven", "Puzzels"],
+    ["Bewaarde artikelen", "Krant", "Nieuwsbrieven", "Puzzels", "Over ons"],
     [
       "Beter Leven",
       "Auto en fiets",
@@ -28,14 +28,19 @@ export const testdata = {
       "Puzzels",
       "Sport",
       "Tech",
-      "Topverhalen vandaag",
       "Volkskrant Magazine",
       "Voor abonnees: onze specials",
       "Wetenschap",
     ],
   ],
   url: [
-    ["/bewaard", "/editie/", "/renderer/", "/puzzels/uitgelicht"],
+    [
+      "/bewaard",
+      "/editie/vandaag",
+      "/nieuwsbrief",
+      "/puzzels/uitgelicht",
+      "/overons",
+    ],
     [
       "/beter-leven",
       "/auto-en-fiets",
@@ -62,7 +67,6 @@ export const testdata = {
       "/puzzels-en-quizzen",
       "/sport",
       "/tech",
-      "/nieuws-achtergrond",
       "/volkskrant-magazine",
       "/digitale-specials",
       "/wetenschap",

@@ -1,10 +1,11 @@
 {
-  "name": "tau-introduction-to-playwright",
+  "name": "playwright-volkskrant",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test:e2e": "npx playwright test tests/",
+    "test:ui": "npx playwright test --ui",
     "test:webkit": "npx playwright test --project webkit",
     "test:chromium": "npx playwright test --project chromium",
     "test:firefox": "npx playwright test --project firefox"

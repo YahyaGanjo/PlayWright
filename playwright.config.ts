@@ -5,6 +5,8 @@ require("dotenv").config();
 export default defineConfig({
   forbidOnly: !!process.env.CI,
 
+  timeout: 150000,
+
   retries: 1,
 
   workers: 3,

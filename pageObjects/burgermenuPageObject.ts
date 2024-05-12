@@ -27,7 +27,7 @@ export class BurgerMenuPage {
       .getByRole("img")
       .first();
     this.appMenu = page.locator('[data-menu="sections"]');
-    this.backToHomeIcon = page.getByRole("banner").getByRole("link").first();
+    this.backToHomeIcon = page.getByRole("banner").getByRole("img").nth(1);
     this.appHeaderIcon = page.locator("div.app-header-home__brand");
   }
 

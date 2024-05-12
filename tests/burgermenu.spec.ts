@@ -26,8 +26,8 @@ test.describe("Burger menu tests", () => {
   test("Verify BurgerMenu items navigation", async () => {
     await burgerMenuPage.validateListItemNavigation(0, 0);
     await burgerMenuPage.clickOnBurgerMenu();
-    await burgerMenuPage.validateListItemNavigation(0, 3);
+    await burgerMenuPage.validateListItemNavigation(1, 7);
     await burgerMenuPage.clickOnBurgerMenu();
-    await burgerMenuPage.validateListItemNavigation(1, 28);
+    await burgerMenuPage.validateListItemNavigation(1, 27);
   });
 });
