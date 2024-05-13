@@ -4,7 +4,9 @@
 
 2. Install Playwright 'npm init playwright@latest'
 
-3. use 'npm run test:e2e' command to run all test cases, on all browsers
+3. replace fixtures/testData.ts with valid credentials.
+
+4. use 'npm run test:e2e' command to run all test cases, on all browsers
 
    #Chrome
 

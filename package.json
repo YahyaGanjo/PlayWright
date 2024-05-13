@@ -1,11 +1,13 @@
 {
-  "name": "playwright-volkskrant",
+  "name": "playwright-linkedIn",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:e2e": "npx playwright test tests/",
+    "test:all": "npx playwright test tests/",
+    "test:e2e": "npx playwright test --grep @e2e",
     "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test Search company and verify followers count --debug",
     "test:webkit": "npx playwright test --project webkit",
     "test:chromium": "npx playwright test --project chromium",
     "test:firefox": "npx playwright test --project firefox"

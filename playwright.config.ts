@@ -7,13 +7,17 @@ export default defineConfig({
 
   timeout: 150000,
 
-  retries: 1,
+  expect: {
+    timeout: 5000,
+  },
 
-  workers: 3,
+  retries: 0,
+
+  workers: 1,
 
   reporter: "html",
   use: {
-    baseURL: "https://www.volkskrant.nl/",
+    baseURL: "https://www.linkedin.com/",
     trace: "on-first-retry",
     screenshot: "only-on-failure",
   },
